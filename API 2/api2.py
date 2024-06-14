@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/api2', methods=['GET'])
 def call_api1():
-    response = requests.get('http://127.0.0.1:5001/api1')
+    response = requests.get('http://api1:5001/api1')
     return jsonify({"message": response.text}), response.status_code
 
 if __name__ == '__main__':
